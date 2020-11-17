@@ -1,0 +1,15 @@
+server:
+  port: 8081
+spring:
+  kafka:
+    consumer:
+      # Endereço do kafka
+      bootstrap-servers: http://localhost:9092
+      # https://kafka.apache.org/documentation/#intro_consumers
+      # É o identificador do grupo
+      group-id: group-id
+      # Configuração da posição inicial, no caso foi earliest, então será do início do tópico
+      auto-offset-reset: earliest
+
+order:
+  topic: ordertopic

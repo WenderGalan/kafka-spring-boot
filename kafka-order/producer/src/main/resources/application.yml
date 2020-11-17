@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  kafka:
+    producer:
+      # Endereço do KAFKA
+      bootstrap-servers: localhost:9092
+      # Tipo da serialização
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      # Tipo de serialização do conteúdo da mensagem
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    # Como vamos enviar a mensagem como Json e não sabemos qual o tipo da mensagem, desabilitamos a adição tipo no header da mensagem.
+    consumer:
+      properties:
+        spring:
+          json:
+            add:
+              type:
+                headers: false
+      # É o tipo da deserialização da chave da mensagem
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      # É o tipo da deserialização do conteúdo da mensagem que vamos alterar para o JSON
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+order:
+  topic: ordertopic
