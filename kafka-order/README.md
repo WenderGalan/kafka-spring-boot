@@ -2,6 +2,8 @@
 
 [![kafka-example](https://github.com/WenderGalan/kafka-spring-boot/blob/main/kafka-order/kafka-exemplo.png)]()
 
+Créditos: [KAFKA NO SPRING BOOT](https://emmanuelneri.com.br/2019/06/04/kafka-no-spring-boot/)
+
 - ### License:
 ```
 Copyright 2020 Wender Galan
