@@ -1,0 +1,13 @@
+# Conexão com o DB
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5433/postgres?schema=anime
+    username: root
+    password: root
+# Adiciona o LOG de SQL
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
